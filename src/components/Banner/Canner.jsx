@@ -6,11 +6,11 @@ import bannerBg from "/src/assets/images/banner-bg.svg";
 import groupAvatar from "/src/assets/images/group-avatar.svg";
 const Banner = () => {
   return (
-    <div className="banner-bg">
-      <div className="flex justify-between md:gap-10 mx-10 md:mx-10 pt-24 items-center">
-        <div className="relative hidden md:block">
-          <img className="lg:max-w-lg bottom-20 left-28" src={banner} alt="" />
-          <div className="!m-[0] absolute left-16  rounded-xl bg-white shadow-[0px_4px_20px_rgba(0,_0,_0,_0.25)] overflow-hidden flex flex-col items-start justify-start py-[26px] px-[27px] z-[2]">
+    <div className="banner-bg relative">
+      <div className="grid md:grid-cols-2 md:gap-20 mx-10 md:mx-32 items-center pt-10 md:pt-20">
+        <div className="hidden md:block">
+          <img className="absolute   max-w-lg bottom-20" src={banner} alt="" />
+          <div className="!m-[0] absolute -bottom-8 left-44  rounded-xl bg-white shadow-[0px_4px_20px_rgba(0,_0,_0,_0.25)] overflow-hidden flex flex-col items-start justify-start py-[26px] px-[27px] z-[2]">
             <div className="flex flex-row items-center justify-start gap-[17px] mq450:flex-wrap">
               <img className=" relative" alt="" src={groupAvatar} />
               <div className="flex flex-col items-start justify-start">
@@ -25,12 +25,12 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="max-h-min">
+        <div className="">
           <div className=" font-medium text-base text-green-400  flex items-center gap-1">
             <img src={arrowUpRightColor} className="w-8" alt="" />
             WELCOME TO JYTHU
           </div>
-          <h1 className="text-[30px] md:text-[35px] lg:text-[65px] text-white font-bold">
+          <h1 className="text-[65px] text-white font-bold">
             A Marketing{" "}
             <span className="underline text text-green-400">Agency</span> To
             Grow Your Business
@@ -42,20 +42,23 @@ const Banner = () => {
           </p>
           {/* cta button */}
 
-          <div className="flex gap-5 flex-wrap items-center mt-4">
+          <div className="flex gap-5 items-center mt-4">
             <div className="flex gap-2 items-center">
               <button className=" text-white text-sm font-semibold px-8 py-3 rounded-3xl ring ring-green-600">
                 Get Started
               </button>
               <img
-                className="p-3 rounded-full bg-gradient-to-t from-green-400 to-teal-500"
-                src={arrowUpRight}
+                className="p-3 ring rounded-full ring-green-600"
+                src={play}
                 alt=""
               />
             </div>
             <div className="flex gap-2 items-center">
-              <img className=" ring rounded-full p-[10px] ring-green-600" src={play} alt="" />
-
+              <img
+                className="p-3 rounded-full bg-gradient-to-t from-green-400 to-teal-500"
+                src={arrowUpRight}
+                alt=""
+              />
               <p className=" text-white text-sm font-semibold ">Watch Video</p>
             </div>
           </div>
