@@ -1,7 +1,8 @@
-import Container from '../Container'
-import MenuDropdown from './MenuDropdown'
-import Logo from '../Logo'
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import Container from "../Container";
+import Logo from "../Logo";
+import NavItem from "./NavItem";
+import NavAction from "./NavAction";
+import { MenuMobile } from "./NavMobile";
 
 const Navbar = () => {
   return (
@@ -11,20 +12,17 @@ const Navbar = () => {
           <div className="flex flex-row  items-center justify-between gap-3 md:gap-0">
             {/* Logo */}
             <Logo />
-            {/* Dropdown Menu */}
-            {/* <MenuDropdown /> */}
-            <div></div>
-
-            <div>
-              <button className="flex items-center gap-1 text-white text-sm font-semibold px-5 py-3 rounded-3xl bg-gradient-to-t from-green-400 to-teal-500">
-                Get quote <AiOutlineArrowRight />
-              </button>
-            </div>
+            {/* NavItem */}
+            <NavItem />
+            {/* NavAction */}
+            <NavAction />
+            {/* mobile nav */}
+            <MenuMobile/>
           </div>
         </Container>
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
