@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.banner-bg {
+  background-image: url(/src/assets/images/banner-bg.svg);
+  /* width: 100%; */
+  height: 670px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.serviceCard-bg {
+  /* background-image: url(/src/assets/services/serviceCard-bg.svg); */
+  background-image: url(/src/assets/services/bg-left-corner.png),url(/src/assets/services/bg-right-top-corner.png);
+  /* object-fit:cover ; */
+  background-repeat: no-repeat;
 
-.banner-bg{
-    background-image: url(/src/assets/images/banner-bg.svg) ;
-    /* width: 100%; */
-    height: 670px;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-size: 200px,200px;
+  background-position: bottom left,top right;
 }

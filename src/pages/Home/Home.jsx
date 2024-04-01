@@ -1,7 +1,8 @@
-import { Helmet } from 'react-helmet-async'
-import Banner from '../../components/Banner/Banner';
-import TrustedPartners from '../../components/TrustedPartners/TrustedPartners';
-import About from '../../components/About/About';
+import { Helmet } from "react-helmet-async";
+import Banner from "../../components/Banner/Banner";
+import TrustedPartners from "../../components/TrustedPartners/TrustedPartners";
+import About from "../../components/About/About";
+import Services from "../../components/Services/Services";
 
 const Home = () => {
   return (
@@ -9,11 +10,12 @@ const Home = () => {
       <Helmet>
         <title>Jythu | A Marketing Agency</title>
       </Helmet>
-<Banner/>
-<TrustedPartners/>
-<About/>
+      <Banner />
+      <TrustedPartners />
+      <About />
+      <Services />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

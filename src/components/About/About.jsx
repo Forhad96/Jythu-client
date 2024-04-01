@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import Container from '../Shared/Container';
 import aboutImg from '/src/assets/About/aboutImg.svg'
 import arrowUpRight from "/src/assets/icon/arrow-up-right-24--solid.svg";
@@ -12,7 +13,7 @@ const About = () => {
     ];
   return (
     <Container>
-      <div className="flex items-center gap-5 my-10 justify-between flex-wrap">
+      <div className="flex items-center gap-5 my-10 justify-between flex-wrap md:flex-nowrap">
         <div className="w-full md:w-1/2">
           <div className=" font-medium text-base text-green-400  flex items-center gap-1">
             <img src={arrowUpRightColor} className="w-8" alt="" />
@@ -39,16 +40,7 @@ const About = () => {
                 </span>
               </p>
 
-              <div className="flex gap-2 items-center">
-                <button className=" text-green-600 text-base font-semibold px-4 md:px-8 py-3 rounded-3xl ring ring-green-600">
-                  Get Started
-                </button>
-                <img
-                  className="p-3 rounded-full bg-gradient-to-t from-green-400 to-teal-500"
-                  src={arrowUpRight}
-                  alt=""
-                />
-              </div>
+<Button text='Get Stated'/>
             </div>
             <ul className="mb-5">
               {serviceItems.map((service, index) => (

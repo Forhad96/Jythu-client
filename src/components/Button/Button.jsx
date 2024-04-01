@@ -1,40 +1,18 @@
-/* eslint-disable react/prop-types */
-const Button = ({ label, onClick, disabled, outline, small, icon: Icon }) => {
+import arrowUpRight from "/src/assets/icon/arrow-up-right-24--solid.svg";
+const Button = ({ text, iconUrl, imageAlt }) => {
   return (
-    <button
-      disabled={disabled}
-      onClick={onClick}
-      className={`
-          relative
-          disabled:opacity-70
-          disabled:cursor-not-allowed
-          rounded-lg
-          hover:opacity-80
-          transition
-          px-4
-          w-full
-          ${outline ? 'bg-white' : 'bg-rose-500'}
-          ${outline ? 'border-black' : 'border-rose-500'}
-          ${outline ? 'text-black' : 'text-white'}
-          ${small ? 'text-sm' : 'text-md'}
-          ${small ? 'py-1' : 'py-3'}
-          ${small ? 'font-light' : 'font-semibold'}
-          ${small ? 'border-[1px]' : 'border-2'}
-        `}
-    >
-      {Icon && (
-        <Icon
-          size={24}
-          className='
-              absolute
-              left-4
-              top-3
-            '
-        />
-      )}
-      {label}
-    </button>
-  )
-}
+    <div className="flex gap-2 items-center">
+      <p className="text-green-600 text-base font-semibold px-4 md:px-8 py-3 rounded-3xl ring ring-green-600">
+        {text}
+      </p>
+      <img
+        className="p-3 rounded-full bg-gradient-to-t from-green-400 to-teal-500"
+        src={arrowUpRight}
+        alt={imageAlt}
+      />
+    </div>
+  );
+};
 
-export default Button
+
+export default Button;
